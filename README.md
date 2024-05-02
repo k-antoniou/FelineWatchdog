@@ -14,7 +14,17 @@ Have you ever worried about your cat wandering too far from home? Feline Watchdo
 - Pushover account (or another notification service supported by ntfy)
 
 ## Installation
-
+1. If you want to create a Wi-Fi hotspot on your Raspberry Pi, you can use the provided bash script. First, make sure to connect your Raspberry Pi to the internet. Then, execute the script using the following commands:
+   ```bash
+   chmod +x myscript.sh
+   ```
+   ```bash
+   bash create_hotspot.sh
+   ```
+   or
+   ```bash
+   ./create_hotspot.sh
+   ```
 1. Connect your ESP32 to your Raspberry Pi via Wi-Fi.
 2. Install Docker on your Raspberry Pi if not already installed:
 
