@@ -1,8 +1,5 @@
 # 🐱 Feline Watchdog: Missing Cat Alert System
-
-<div style="text-align:center">
-  <img src="ProjectImage.jpeg" alt="Project Image" width="25%" height="25%">
-</div>
+![ProjectImage](ProjectImage.png)
 
 Feline Watchdog is an ESP32-based system designed to monitor the Wi-Fi connection between your cat's collar-mounted ESP32 device and a Raspberry Pi. If the Wi-Fi connection is lost, indicating that your cat may have wandered out of range, the system sends a notification to your iOS or Android device using the ntfy Linux tool running in a Docker container on the Raspberry Pi.
 
