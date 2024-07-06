@@ -51,11 +51,32 @@
 
   ## PCB Design
 
+
+  ### Dual Power Sources: Li-ion Battery and USB
+
+  This setup allows the ESP32 to be powered either by a Li-ion battery or directly from a USB source via a voltage regulator.
+
+  ### Li-ion Battery Connection
+  - The Li-ion battery is connected to the **BATT+** and **BATT-** terminals of the charger module.
+  - **BATT+** from the charger module is connected to the 3.3V input of the ESP32 through a Schottky diode.
+  - **BATT-** is connected to the GND of the ESP32.
+
+  ### USB Power Connection
+  - The 5V line from the USB is connected to the **VIN** of the voltage regulator.
+  - **GND** from the USB is connected to the GND of the voltage regulator.
+  - The 3.3V output of the voltage regulator is connected to the 3.3V input of the ESP32 through a Schottky diode.
+
+  
+
   Screenshots from KiCad:
 
   ![Alt Text](Images/FelineWatchdog.png)
 
+  Screenshots from Fusion 360:
 
+
+  ### Important Notes
+  - Schottky diodes are used to prevent backfeeding between the battery and USB power sources.
 
   ## 3D Design
 
