@@ -81,11 +81,13 @@
   ## 3D Design
 
   Screenshots from Fusion 360:
+  ![Alt Text](Images/3dDesign.png)
 
 
   ## 3D Printed Case
 
   Screenshots of the printed 3D case:
+  ![Alt Text](Images/3dCase.png)
 
 
   ## To Do
