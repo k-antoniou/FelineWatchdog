@@ -61,7 +61,7 @@
   - **BATT+** from the charger module is connected to the 3.3V input of the ESP32 through a Schottky diode.
   - **BATT-** is connected to the GND of the ESP32.
 
-  ### USB Power Connection
+  ### USB Power Connection (For Re-programming)
   - The 5V line from the USB is connected to the **VIN** of the voltage regulator.
   - **GND** from the USB is connected to the GND of the voltage regulator.
   - The 3.3V output of the voltage regulator is connected to the 3.3V input of the ESP32 through a Schottky diode.
@@ -93,6 +93,8 @@
   ## To Do
 
   - [x] Implement notification functionality using ntfy for sending alerts to iOS or Android devices.
+  - [x] Implementation without a middle point such as Raspberry Pi, but directly with a router and ESP32.
+  - [ ] Lower power consumption.
   - [ ] Implement HTTP communication method for sending alerts to a designated endpoint.
   - [ ] Implement MQTT communication method for publishing messages to a specific topic on an MQTT broker.
   - [ ] Ensure seamless integration of these functionalities within a Docker container on the Raspberry Pi.
@@ -116,3 +118,5 @@
   ## 📜 License
 
   This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Thank you for visiting FelineWatchdog!** ✨
