@@ -1,21 +1,31 @@
-  # 🐱 Feline Watchdog: Missing Cat Alert System
-  ![ProjectImage](Images/ProjectImage.png)
+# 🐱 Feline Watchdog: Missing Cat Alert System
+![ProjectImage](Images/ProjectImage.png)
 
-  Feline Watchdog is an ESP32-based system designed to monitor the Wi-Fi connection between your cat's collar-mounted ESP32 device and a Raspberry Pi. If the Wi-Fi connection is lost, indicating that your cat may have wandered out of range, the system sends a notification to your iOS or Android device using the ntfy Linux tool running in a Docker container on the Raspberry Pi.
+Feline Watchdog is an ESP32-based system designed to monitor the Wi-Fi connection between your cat's collar-mounted ESP32 device and your home network. If the Wi-Fi connection is lost, indicating that your cat may have wandered out of range, the system sends a notification to your iOS or Android device using the ntfy Linux tool.
 
-  ## Overview
+## Overview
 
-  Have you ever worried about your cat wandering too far from home? Feline Watchdog provides peace of mind by alerting you when your cat goes missing. By monitoring the Wi-Fi connection between your cat's collar-mounted ESP32 device and your Raspberry Pi, Feline Watchdog can detect when your cat is out of range and send you an alert notification on your mobile device.
+Have you ever worried about your cat wandering too far from home? Feline Watchdog provides peace of mind by alerting you when your cat goes missing. By monitoring the Wi-Fi connection between your cat's collar-mounted ESP32 device and your home network, Feline Watchdog can detect when your cat is out of range and send you an alert notification on your mobile device.
 
-  ## 🔧 Prerequisites
+## 🔧 Prerequisites
 
-  - ESP32 microcontroller
-  - Raspberry Pi
-  - Docker installed on Raspberry Pi
-  Caseprovided bash script using **nmcli** tool. First, make sure to connect your Raspberry Pi to the internet. Then, execute the script using the following commands:
-    ```bash
-    chmod +x myscript.sh
-    ```
+- ESP32 microcontroller
+- Raspberry Pi (Optional)
+- Docker (if using Raspberry Pi)
+- Router (if not using Raspberry Pi)
+
+## Embedded System Configuration
+
+![Alt Text](Images/script.png)
+
+<p align="center">
+  <b>Two implementations of Embedded System Configuration</b>
+</p>
+
+### Option 1: With Raspberry Pi
+
+1. **Setup Wi-Fi Hotspot on Raspberry Pi**
+   - Use the provided bash script using the **nmcli** tool to create a Wi-Fi hotspot on the Raspberry Pi. 
     ```bash
     bash create_hotspot.sh
     ```
@@ -23,8 +33,7 @@
     ```bash
     ./create_hotspot.sh
     ```
-  1. Connect your ESP32 to your Raspberry Pi via Wi-Fi.
-  2. Install the Docker on your Raspberry Pi if not already installed. 
+  2. **Install Docker on your Raspberry Pi**
   ```bash
   sudo docker --version
   Docker version 20.10.21, build 20.10.21-0ubuntu1~18.04.3
@@ -39,17 +48,39 @@
       serve \
       --cache-file /var/cache/ntfy/cache.db
   ```
-  ## ESP32 Configuration
-  When you upload this **cat.ino** code to your ESP32, it will attempt to connect to the specified Wi-Fi hotspot. Once connected, it will print the assigned IP address to the serial monitor. The ESP32 connects to the Wi-Fi hotspot created by the Raspberry Pi. The Raspberry Pi continuously monitors the connection status of the ESP32. If the Raspberry Pi detects that the connection with the ESP32 is lost, it triggers a notification using ntfy.
-  ## Embedded System Configuration
+## ESP32 Configuration and Notification Setup
 
-  ![Alt Text](Images/script.png)
+### Option 1: Using Raspberry Pi as a Wi-Fi Hotspot
 
-  <p align="center">
-    <b>Two implementations of Embedded System Configuration</b>
-  </p>
+1. **ESP32 Configuration**
+   - Upload the `cat.ino` code to your ESP32.
+   - The ESP32 will connect to the Wi-Fi hotspot created by the Raspberry Pi.
+   - Once connected, the assigned IP address will be printed to the serial monitor.
 
-  ## PCB Design
+2. **Raspberry Pi Monitoring and Notification**
+   - The Raspberry Pi continuously monitors the connection status of the ESP32.
+   - If the connection is lost, it triggers a notification using ntfy.
+
+### Option 2: Direct Connection to Router
+
+1. **Connect ESP32 Directly to Router**
+   - Configure your ESP32 to connect directly to your home Wi-Fi network (router).
+
+2. **ESP32 Configuration**
+   - Upload the `cat.ino` code to your ESP32.
+   - The ESP32 will connect to the specified Wi-Fi network and print the assigned IP address to the serial monitor.
+
+3. **Notification Setup**
+   - Set up ntfy or another notification service on a server or computer within your home network.
+   - This service will monitor the connection status of the ESP32.
+   - If the connection is lost, it triggers a notification using ntfy or a similar service.
+
+### Notes
+- Ensure that your network's firewall settings allow communication between the ESP32 and the notification service.
+- Configure ntfy or your chosen notification service according to the service's documentation for optimal performance.
+
+
+## PCB Design
 
 
   ### Dual Power Sources: Li-ion Battery and USB
