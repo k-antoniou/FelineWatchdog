@@ -48,7 +48,7 @@ Have you ever worried about your cat wandering too far from home? Feline Watchdo
       serve \
       --cache-file /var/cache/ntfy/cache.db
   ```
-## ESP32 Configuration and Notification Setup
+## 📡 ESP32 Configuration and Notification Setup
 
 ### Option 1: Using Raspberry Pi as a Wi-Fi Hotspot
 
@@ -62,6 +62,9 @@ Have you ever worried about your cat wandering too far from home? Feline Watchdo
    - If the connection is lost, it triggers a notification using ntfy.
 
 ### Option 2: Direct Connection to Router
+
+For a basic example of using NTFY with ESP boards, check out the [ntfy_on_a_chip repository](https://github.com/gergepalfi/ntfy_on_a_chip). It provides a foundational setup for communicating with the NTFY server and can be adapted for various projects, including the [Feline Watchdog](https://github.com/YourUsername/FelineWatchdog).
+
 
 1. **Connect ESP32 Directly to Router**
    - Configure your ESP32 to connect directly to your home Wi-Fi network (router).
@@ -80,7 +83,7 @@ Have you ever worried about your cat wandering too far from home? Feline Watchdo
 - Configure ntfy or your chosen notification service according to the service's documentation for optimal performance.
 
 
-## PCB Design
+## 🔩 PCB Design
 
 
   ### Dual Power Sources: Li-ion Battery and USB
@@ -109,7 +112,7 @@ Have you ever worried about your cat wandering too far from home? Feline Watchdo
   ### Important Notes
   - Schottky diodes are used to prevent backfeeding between the battery and USB power sources.
 
-  ## 3D Design
+  ## 🏗️ 3D Design
 
   Screenshots from Fusion 360:
   ![Alt Text](Images/3dDesign.png)
@@ -134,7 +137,7 @@ Have you ever worried about your cat wandering too far from home? Feline Watchdo
   - [ ] Gather feedback and suggestions from users for further enhancements.
 
 
-  ## Authors
+  ## 🧑‍💻 Authors
 
   - [![Katerina Antoniou](https://img.shields.io/badge/GitHub-Katerina_Antoniou-purple?style=flat&logo=github)](https://github.com/k-antoniou)
 
@@ -142,12 +145,27 @@ Have you ever worried about your cat wandering too far from home? Feline Watchdo
   - [![Paschalis M.](https://img.shields.io/badge/GitHub-Paschalis_M.-blue?style=flat&logo=github)](https://github.com/Paschalis)
 
 
-  ## 🤝 Contributing
+  ## 👥 Contributors
+  -
+  -
+  -
+
 
   Contributions are welcome! Feel free to submit pull requests or open issues if you encounter any problems.
 
-  ## 📜 License
+
+   ## 🙏 Acknowledgements
+
+   - A special thanks to the [ntfy_on_a_chip](https://github.com/gergepalfi/ntfy_on_a_chip) repository by Gergely Palfi. The example code and documentation provided were instrumental in implementing the direct connection option for the Feline Watchdog project. The guidance on using NTFY with ESP boards and the detailed explanation of HTTPS communication enabled us to streamline our setup by connecting the ESP32 directly to a router without needing an intermediate server like a Raspberry Pi. Your work greatly facilitated our development process and contributed to the success of the Feline Watchdog system. Thank you!
+
+   - We would also like to acknowledge the creators of the [ntfy](https://ntfy.sh) app. The app’s simplicity and functionality made it easy to send and receive notifications, which is a core feature of the Feline Watchdog system. The ability to integrate it seamlessly into our project greatly enhanced its effectiveness.
+
+   ## 📜 License
 
   This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+  
+   - [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Thank you for visiting FelineWatchdog!** ✨
+
+
