@@ -24,7 +24,10 @@ Have you ever worried about your cat wandering too far from home? Feline Watchdo
 
 ### Option 1: With Raspberry Pi
 
-1. **Setup Wi-Fi Hotspot on Raspberry Pi**
+1. **Setting Up a Wi-Fi Hotspot on Embedded System**
+
+   - For detailed instructions on setting up a Wi-Fi hotspot on your embedded system, please refer to the [Wi-Fi Hotspot Setup Instructions](WiFi_hotspot.md).
+
    - Use the provided bash script using the **nmcli** tool to create a Wi-Fi hotspot on the Raspberry Pi. 
     ```bash
     bash create_hotspot.sh
@@ -63,7 +66,7 @@ Have you ever worried about your cat wandering too far from home? Feline Watchdo
 
 ### Option 2: Direct Connection to Router
 
-For a basic example of using NTFY with ESP boards, check out the [ntfy_on_a_chip repository](https://github.com/gergepalfi/ntfy_on_a_chip). It provides a foundational setup for communicating with the NTFY server and can be adapted for various projects, including the [Feline Watchdog](https://github.com/YourUsername/FelineWatchdog).
+For a basic example of using NTFY with ESP boards, check out the [ntfy_on_a_chip repository](https://github.com/gergepalfi/ntfy_on_a_chip). It provides a foundational setup for communicating with the NTFY server and can be adapted for various projects, including this.
 
 
 1. **Connect ESP32 Directly to Router**
@@ -161,10 +164,11 @@ For a basic example of using NTFY with ESP boards, check out the [ntfy_on_a_chip
    - We would also like to acknowledge the creators of the [ntfy](https://ntfy.sh) app. The app’s simplicity and functionality made it easy to send and receive notifications, which is a core feature of the Feline Watchdog system. The ability to integrate it seamlessly into our project greatly enhanced its effectiveness.
 
    ## 📜 License
+   
+   This project is licensed under the [GPLv3 License](https://opensource.org/licenses/GPL-3.0) - see the [LICENSE](LICENSE) file for details.
 
-  This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-  
-   - [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+   - [![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://opensource.org/licenses/GPL-3.0)
+
 
 **Thank you for visiting FelineWatchdog!** ✨
 
