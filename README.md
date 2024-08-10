@@ -24,7 +24,10 @@ Have you ever worried about your cat wandering too far from home? Feline Watchdo
 
 ### Option 1: With Raspberry Pi
 
-1. **Setup Wi-Fi Hotspot on Raspberry Pi**
+1. **Setting Up a Wi-Fi Hotspot on Embedded System**
+
+   - For detailed instructions on setting up a Wi-Fi hotspot on your embedded system, please refer to the [Wi-Fi Hotspot Setup Instructions](WiFi_hotspot.md).
+
    - Use the provided bash script using the **nmcli** tool to create a Wi-Fi hotspot on the Raspberry Pi. 
     ```bash
     bash create_hotspot.sh
@@ -63,7 +66,7 @@ Have you ever worried about your cat wandering too far from home? Feline Watchdo
 
 ### Option 2: Direct Connection to Router
 
-For a basic example of using NTFY with ESP boards, check out the [ntfy_on_a_chip repository](https://github.com/gergepalfi/ntfy_on_a_chip). It provides a foundational setup for communicating with the NTFY server and can be adapted for various projects, including the [Feline Watchdog](https://github.com/YourUsername/FelineWatchdog).
+For a basic example of using NTFY with ESP boards, check out the [ntfy_on_a_chip repository](https://github.com/gergepalfi/ntfy_on_a_chip). It provides a foundational setup for communicating with the NTFY server and can be adapted for various projects, including this.
 
 
 1. **Connect ESP32 Directly to Router**
