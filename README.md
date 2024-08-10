@@ -161,10 +161,11 @@ For a basic example of using NTFY with ESP boards, check out the [ntfy_on_a_chip
    - We would also like to acknowledge the creators of the [ntfy](https://ntfy.sh) app. The app’s simplicity and functionality made it easy to send and receive notifications, which is a core feature of the Feline Watchdog system. The ability to integrate it seamlessly into our project greatly enhanced its effectiveness.
 
    ## 📜 License
+   
+   This project is licensed under the [GPLv3 License](https://opensource.org/licenses/GPL-3.0) - see the [LICENSE](LICENSE) file for details.
 
-  This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-  
-   - [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+   - [![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://opensource.org/licenses/GPL-3.0)
+
 
 **Thank you for visiting FelineWatchdog!** ✨
 
