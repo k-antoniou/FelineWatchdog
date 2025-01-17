@@ -149,17 +149,13 @@ For a basic example of using NTFY with ESP boards, check out the [ntfy_on_a_chip
 
 
   ## 👥 Contributors
-  -
-  -
-  -
-
 
   Contributions are welcome! Feel free to submit pull requests or open issues if you encounter any problems.
 
 
    ## 🙏 Acknowledgements
 
-   - A special thanks to the [ntfy_on_a_chip](https://github.com/gergepalfi/ntfy_on_a_chip) repository by Gergely Palfi. The example code and documentation provided were instrumental in implementing the direct connection option for the Feline Watchdog project. The guidance on using NTFY with ESP boards and the detailed explanation of HTTPS communication enabled us to streamline our setup by connecting the ESP32 directly to a router without needing an intermediate server like a Raspberry Pi. Your work greatly facilitated our development process and contributed to the success of the Feline Watchdog system. Thank you!
+   - A special thanks to the [ntfy_on_a_chip](https://github.com/gergepalfi/ntfy_on_a_chip) repository by [Gerge](https://github.com/gergepalfi). The example code and documentation provided were instrumental in implementing the direct connection option for the Feline Watchdog project. The guidance on using NTFY with ESP boards and the detailed explanation of HTTPS communication enabled us to streamline our setup by connecting the ESP32 directly to a router without needing an intermediate server like a Raspberry Pi. Your work greatly facilitated our development process and contributed to the success of the Feline Watchdog system. Thank you!
 
    - We would also like to acknowledge the creators of the [ntfy](https://ntfy.sh) app. The app’s simplicity and functionality made it easy to send and receive notifications, which is a core feature of the Feline Watchdog system. The ability to integrate it seamlessly into our project greatly enhanced its effectiveness.
 
